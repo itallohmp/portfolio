@@ -322,31 +322,36 @@
             <!-- Fim Item -->
           </div>
 
-          <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
-            <div class="row gy-4">
-              <div class="col-md-6">
-                <input type="text" name="name" class="form-control" placeholder="Nome" required="" />
-              </div>
-
-              <div class="col-md-6">
-                <input type="email" class="form-control" name="email" placeholder="Email" required="" />
-              </div>
-
-              <div class="col-md-12">
-                <input type="text" class="form-control" name="subject" placeholder="Assunto" required="" />
-              </div>
-
-              <div class="col-md-12">
-                <textarea class="form-control" name="message" rows="6" placeholder="Mensagem" required=""></textarea>
-              </div>
-
+          <form action="{% url 'index' %}" method="post" class="php-email-form">
+              {% csrf_token %}
+              <div class="row gy-4">
+                  <div class="col-md-6">
+                      {{ form.name }}
+                  </div>
+                  <div class="col-md-6">
+                      {{ form.email }}
+                  </div>
+                  <div class="col-md-12">
+                      {{ form.subject }}
+                  </div>
+                  <div class="col-md-12">
+                      {{ form.message }}
+                  </div>
               <div class="col-md-12 text-center">
-                <div class="loading">Carregando...</div>
-                <div class="error-message">Ocorreu um erro ao enviar sua mensagem.</div>
-                <div class="sent-message">Sua mensagem foi enviada. Obrigado!</div>
-                <button type="submit">Enviar Mensagem</button>
+                  <div class="loading">Carregando...</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Sua mensagem foi enviada. Obrigado!</div>
+                  <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
               </div>
-            </div>
+              </div>
+              {% if messages %}
+                  {% for message in messages %}
+                      <div class="sent-message d-block">
+                          {{ message }}
+                      </div>
+                  {% endfor %}
+              {% endif %}
+
           </form>
           <!-- Final do formulário -->
         </div>
