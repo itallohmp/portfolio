@@ -15,8 +15,7 @@ SECRET_KEY = 'django-insecure-0is#0ej3(u$*(xg)g0qm-)a3f&)lm@o61eokqyx1^bgpq5f)t8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://itallohmp.pythonanywhere.com/']
-
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'itallohmp.pythonanywhere.com']
 
 # Application definition
 
@@ -45,10 +44,11 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -105,8 +105,6 @@ USE_TZ = True
 # Static files
 
 
-STATIC_URL = 'static/'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
