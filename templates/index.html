@@ -1,27 +1,27 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
   <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title> Itallo Polito | Portfólio </title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Itallo Polito">
+    <meta name="keywords" content="HTML, CSS, Python, Portfólio, Itallo Polito">
+    <title>Itallo Polito | Portfólio</title>
 
-    <link href="{% static 'assets/img/favicon-new.png' %}" rel="icon" />
-    <link href="{% static 'assets/img/apple-touch-icon-new.png' %}" rel="apple-touch-icon" />
+    <link rel="icon" href="{% static 'assets/img/favicon-new.png' %}">
+    <link rel="apple-touch-icon" href="{% static 'assets/img/apple-touch-icon-new.png' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
-    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet" />
-
-    <link href="{% static 'assets/css/main.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendor/aos/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
   </head>
 
   <body class="index-page">
@@ -264,10 +264,7 @@
           </div>
         </div>
       </section>
-
-      <!-- Inicio area de contato -->
       <section id="contato" class="contact section">
-        <!-- TÍTULO DA SEÇÃO -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Contato</h2>
           <div>
@@ -286,7 +283,6 @@
                 </div>
               </div>
             </div>
-            <!-- Fim Item -->
 
             <div class="col-md-6">
               <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
@@ -297,7 +293,6 @@
                 </div>
               </div>
             </div>
-            <!-- Fim Item -->
 
             <div class="col-md-6">
               <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
@@ -308,7 +303,6 @@
                 </div>
               </div>
             </div>
-            <!-- Fim Item -->
 
             <div class="col-md-6">
               <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="500">
@@ -323,7 +317,6 @@
                 </div>
               </div>
             </div>
-            <!-- Fim Item -->
           </div>
 
           <form action="{% url 'index' %}" method="post" class="php-email-form">
@@ -357,13 +350,10 @@
               {% endif %}
 
           </form>
-          <!-- Final do formulário -->
         </div>
       </section>
     </main>
-    {% comment %}CONTATO FINAL{% endcomment %}
 
-    {% comment %}RODAPÉ{% endcomment %}
     <footer id="footer" class="footer dark-background">
       <div class="container">
         {% comment %} <h3 class="sitename">Minhas redes</h3>
@@ -383,13 +373,10 @@
       </div>
     </footer>
 
-    <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-    <!-- Preloader -->
     <div id="preloader"></div>
 
-    <!-- Vendor JS Files -->
     <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
     <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
@@ -401,7 +388,6 @@
     <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
     <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
 
-    <!-- Main JS File -->
     <script src="{% static 'assets/js/main.js' %}"></script>
   </body>
 </html>
