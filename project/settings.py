@@ -114,4 +114,4 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'itallogb@gmail.com'      
-EMAIL_HOST_PASSWORD = 'tzul mzqn fywc mzjy'     
+EMAIL_HOST_PASSWORD = 'elel mhyl vfav jodw'     
