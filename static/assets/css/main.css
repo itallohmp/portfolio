@@ -31,13 +31,6 @@
 
 /* Presets de Cores - Classes que sobrescrevem cores globais quando aplicadas em uma seção */
 
-/* Seções alternadas (zebra): grafite com tinta de ciano entre as seções pretas,
-   com superfície um degrau acima para cards e chips continuarem elevados */
-.section-alt {
-  --background-color: #171c20;
-  --surface-color: #232a30;
-}
-
 .dark-background {
   --background-color: rgba(15, 15, 15, 0.975);
   --default-color: #ffffff;
