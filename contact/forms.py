@@ -16,3 +16,8 @@ class ContactForm(forms.Form):
     message = forms.CharField(
         widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 6, 'placeholder': 'Mensagem'})
     )
+    # Honeypot anti-spam: fica invisível na página; humanos não o preenchem
+    website = forms.CharField(
+        required=False,
+        widget=forms.TextInput(attrs={'tabindex': '-1', 'autocomplete': 'off'})
+    )

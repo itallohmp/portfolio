@@ -1,19 +1,31 @@
-Este projeto é um portfólio desenvolvido para apresentar meus trabalhos, habilidades e trajetória profissional. Construído com Python e Django no backend, e utilizando HTML, CSS, Bootstrap e JavaScript no frontend, o objetivo é oferecer uma interface moderna, responsiva e funcional para destacar projetos e experiências.
+# Portfólio — Itallo Polito
 
-Utilizei as seguintes linguagens:
+Aplicação web de portfólio pessoal com Python/Django no backend e Bootstrap no frontend.
+Publicada em produção no PythonAnywhere: https://itallohmp.pythonanywhere.com/
 
-- Python – linguagem principal do backend e Django – framework web para organização e gerenciamento do projeto
-- HTML5 & CSS3 – estrutura e estilização das páginas
-- Bootstrap – componentes responsivos e design moderno
-- JavaScript – interatividade e dinamismo no frontend
+## Stack
 
-Funcionalidades existentes no meu portfólio
+- Python 3.12 + Django 6
+- HTML5, CSS3, Bootstrap 5, JavaScript
+- AOS (animações de scroll) e Typed.js (efeito de digitação)
 
-- Página inicial com apresentação pessoal
-- Seção Sobre minha trajettória
-- Formulário de contato funcional
-- Layout responsivo para diferentes dispositivos
-- Integração entre frontend e backend com Django
+## Funcionalidades
 
+- Hero com CTAs "Ver projetos" e "Baixar CV"
+- Seções: Sobre mim, Carreira (formação + experiência), Habilidades por grupos, Projetos e Contato
+- Formulário de contato com envio de e-mail, validação e honeypot anti-spam
+- Layout responsivo em tema escuro com acento ciano
 
-Link: https://itallohmp.pythonanywhere.com/
+## Rodando localmente
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+copy .env.example .env   # e preencha os valores
+python manage.py runserver
+```
+
+Configurações sensíveis (SECRET_KEY, credenciais de e-mail) vivem em variáveis de
+ambiente carregadas do arquivo `.env` — que nunca é commitado. Em produção, crie um
+`.env` equivalente na pasta do projeto (com `DJANGO_DEBUG=False`).
