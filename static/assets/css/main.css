@@ -31,9 +31,11 @@
 
 /* Presets de Cores - Classes que sobrescrevem cores globais quando aplicadas em uma seção */
 
-.light-background {
-  --background-color: #1a1a1a;
-  --surface-color: #343434;
+/* Seções alternadas (zebra): grafite com tinta de ciano entre as seções pretas,
+   com superfície um degrau acima para cards e chips continuarem elevados */
+.section-alt {
+  --background-color: #171c20;
+  --surface-color: #232a30;
 }
 
 .dark-background {
@@ -652,7 +654,7 @@ section,
   margin: 0;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: color-mix(in srgb, var(--default-color), transparent 35%);
   position: relative;
 }
 
@@ -1052,7 +1054,7 @@ section,
   line-height: 1;
   margin: 4px 6px 0 0;
   transition: 0.3s;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
 .contact .info-item .social-links a:hover {
@@ -1098,7 +1100,7 @@ section,
 .contact .php-email-form input[type=text]::placeholder,
 .contact .php-email-form input[type=email]::placeholder,
 .contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
 
 .contact .php-email-form button[type=submit] {

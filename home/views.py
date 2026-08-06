@@ -44,3 +44,27 @@ def index(request):
         return HttpResponse("Verifique os campos preenchidos e tente novamente.", status=400)
 
     return render(request, "index.html", {"form": ContactForm()})
+
+
+def robots_txt(request):
+    content = (
+        "User-agent: *\n"
+        "Allow: /\n"
+        "Disallow: /admin/\n"
+        "Sitemap: https://itallohmp.pythonanywhere.com/sitemap.xml\n"
+    )
+    return HttpResponse(content, content_type="text/plain")
+
+
+def sitemap_xml(request):
+    content = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        '  <url>\n'
+        '    <loc>https://itallohmp.pythonanywhere.com/</loc>\n'
+        '    <changefreq>monthly</changefreq>\n'
+        '    <priority>1.0</priority>\n'
+        '  </url>\n'
+        '</urlset>\n'
+    )
+    return HttpResponse(content, content_type="application/xml")
